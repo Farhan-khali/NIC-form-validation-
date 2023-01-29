@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form    onsubmit="return validate()" >
+    <div class="container">
+      <div class="center">  <h1>NIC Registration Form</h1>
+        <label >Enter your name</label>
+        <input type="alphabet" class="name" id="name" onkeyup="white(this.value)|| helo(this.value) " >
+        <error id="alert name"></error>
+        <error id="ilert"></error>
+        <error id="alerti"></error>
+
+        <error id="alert names"></error>
+        <error id="alert namess"></error>
+        <label  >Enter e-mail </label>
+        <input type="text" id="email" onclick="check()"  onkeyup="white(this.value)|| checki(this.value)" >
+        <error id="alert e-mail"></error>
+        <error id="alertii e-mail"></error>
+
+        <error id="alert e-mails"></error>
+        <label > Enter phone number</label>
+        <input type="number" class="phone" id="phone" onclick="lol()" onkeyup="white(this.value)|| chelo(this.value)||hilo(this.value)" >
+        <error id="alert no"></error>
+        <error id="alert nos"></error>
+        <error id="alerti no"></error>
+
+        <label > Enter your NIC</label>
+        <input type="number" class="nic" id="nic"  onclick="dow()" onkeyup="white(this.value)||hiloo(this.value)" >
+        <error id="alert nic"></error>
+        <error id="alert nicss"></error>
+
+        <error id="alert nics"></error>
+        <label > Enter last qualification degree name</label>
+        <input type="text" class="degree" id="degree" onclick="flow()" onkeyup="white(this.value)||hilooo(this.value)"  >
+        <error id="alert degree"></error>
+        <error id="alert degrees"></error>
+        <error id="alert degreess"></error>
+
+        <button class="submit" type="submit">submit</button>
+    </div> </div>
+    </form>
+    
+</body>
+<script>
+// function validate(){
+
+
+var nam = document.getElementById('name');
+function check(){
+    if(nam.value.length ==0){
+        document.getElementById('alert name').innerText="Enter your name"  
+      
+    }
+     else{
+        document.getElementById('alert name').innerText=""    
+      
+    }
+}
+var mail = document.getElementById('email');
+function lol(){
+    if(mail.value.length ==0){
+        document.getElementById('alert e-mail').innerText="Enter your email"    
+        
+    }
+     else{
+        document.getElementById('alert e-mail').innerText=""    
+    
+    }
+}
+var nic =  document.getElementById('nic');
+function flow(){
+    
+    if(nic.value.length ==0){
+        document.getElementById('alert nic').innerText="Enter your NIC"  ;
+        
+    
+    }
+     else{
+
+        document.getElementById('alert nic').innerText="" ;   
+        
+        
+    }
+}
+var phon =document.getElementById('phone');
+function dow(){
+    
+    if(phon.value.length ==0){
+        document.getElementById('alert no').innerText="Enter your phone number"    
+        
+    }
+     else{
+        document.getElementById('alert no').innerText=""    
+        
+    }
+}
+var deg =document.getElementById('degree')
+function call(){
+   
+    if(deg.value.length ==0){
+        document.getElementById('alert degree').innerText="Enter your phone number"
+        // alert("blank are not allowed");
+        // return false;    
+    }
+     else{
+        document.getElementById('alert degree').innerText=""
+        // return true;
+
+    }
+}
+function validate(){
+  var deg =document.getElementById('degree')
+   if(nam.value.length == 0 ||mail.value.length ==0||nic.value.length ==0 || phon.value.length ==0||deg.value.length ==0){
+          // alert("blank are not allowed");
+        return false;
+   }else{
+       
+        confirm("THANKS FOR REGISTRATION"); 
+        return true;
+   }
+    if(alert .innerText=" space is not allowed"){
+return false;
+    }
+else{
+return true;
+}
+   
+ if(document.getElementById('alerti').innerText="Invalid Name"){
+    return false;
+   }
+   else{
+    return ture;
+   }
+
+}
+
+
+// focusin or focusout
+
+  var nam = document.getElementById('name');
+  function fe(e) {
+    nam.style.backgroundColor ='green'
+  }
+  function be() {
+    if(nam.value.length ==0){
+        nam.style.backgroundColor ='red'
+        document.getElementById('alert names').innerText="Blank are not allowed"   
+    }
+    if(nam.value.length >0){
+        nam.style.backgroundColor ='green'
+        document.getElementById('alert names').innerText=""
+    //     var lowerCase = /[a-z]/g;
+    //      var upperCase = /[A-Z]/g;
+    //  var pass =lowerCase.test(data);
+    //   var checks=upperCase.test(data);
+    //   if (pass || checks) {
+ 
+    //        document.getElementById('alerti').innerText="gggg"
+    //    } 
+    //      else {
+  
+    //     document.getElementById('alerti').innerText="Invalid Name"
+    //     }
+ 
+    
+    }
+  }
+  nam.addEventListener("focus" ,fe);
+  nam.addEventListener("blur" ,be );
+ 
+  
+
+  var em = document.getElementById('email');
+  function fes(e) {
+    em.style.backgroundColor ='green'
+  }
+  function bes() {
+    if(em.value.length ==0){
+        em.style.backgroundColor ='red'
+        document.getElementById('alert e-mails').innerText="blank are not allowed"   
+    }
+    else{
+        em.style.backgroundColor ='green'
+        document.getElementById('alert e-mails').innerText=""
+    }
+  }
+  em.addEventListener("focus" ,fes);
+  em.addEventListener("blur" ,bes);
+
+
+
+  var emm = document.getElementById('phone');
+  function fess(e) {
+    emm.style.backgroundColor ='green'
+  }
+  function bess() {
+    if(emm.value.length ==0){
+        emm.style.backgroundColor ='red'
+        document.getElementById('alert nos').innerText="Blank are not allowed"
+    }
+    else{
+        emm.style.backgroundColor ='green'
+        document.getElementById('alert nos').innerText=""
+    }
+  }
+  emm.addEventListener("focus" ,fess);
+  emm.addEventListener("blur" ,bess);
+
+
+
+  var emmm = document.getElementById('nic');
+  function fesss(e) {
+    emmm.style.backgroundColor ='green'
+  }
+  function besss() {
+    if(emmm.value.length ==0){
+        emmm.style.backgroundColor ='red'
+        document.getElementById('alert nics').innerText="Blank are not allowed"
+    }
+    else{
+        emmm.style.backgroundColor ='green'
+        document.getElementById('alert nics').innerText=""
+    }
+  }
+  emmm.addEventListener("focus" ,fesss);
+  emmm.addEventListener("blur" ,besss);
+
+
+
+  var emmmm = document.getElementById('degree');
+  function fessss(e) {
+    emmmm.style.backgroundColor ='green'
+  }
+  function bessss() {
+    if(emmmm.value.length ==0){
+        emmmm.style.backgroundColor ='red'   
+     document.getElementById('alert degrees').innerText="Blank are not allowed"
+ }
+    else{
+        emmmm.style.backgroundColor ='green'
+        document.getElementById('alert degrees').innerText="";
+    }
+  }
+  emmmm.addEventListener("focus" ,fessss);
+  emmmm.addEventListener("blur" ,bessss);
+
+
+// // space 
+ var regexp= /\s/g; 
+//  console.log(regexp)
+ var alert = document.getElementById('alert degreess');
+function white (data){
+  var isspace =regexp.test(data);
+  if(isspace){
+alert .innerText=" space is not allowed "
+ 
+// alert(hello);
+// console.log("ey")
+  }
+  else{
+    alert.innerText=""
+  }
+}
+
+  // function ge(){
+  //   document.getElementById('alerti').innerText=""
+  // } 
+  var lowerCase = /[a-z]/g;
+var upperCase = /[A-Z]/g;
+// var Invalid =document.getElementById(alerti).innerText
+
+//   var alert= document.getElementById(ilert).innerText;
+
+// var Invalid =document.getElementById(alerti).innerText
+
+//   var alert= document.getElementById(ilert).innerText;
+// var pass =lowerCase.test(data);
+// var checks=upperCase.test(data);
+function helo(data){
+  var pass =lowerCase.test(data);
+var checks=upperCase.test(data);
+if (pass || checks) {
+  // console.log("hey")
+  document.getElementById('alerti').innerText=""
+} else {
+  // var Invalid="Invalid name"
+  // console.log("sorry")
+  document.getElementById('alerti').innerText="Invalid Name"
+}
+
+}
+
+
+
+var validregexp=/^[a-zA-Z0-9.!#$%&*+/=?^_{|}-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+function checki(data){
+  var hash = validregexp.test(data);
+  if(hash){
+    console.log("good")
+    document.getElementById('alertii e-mail').innerText=""
+
+  }else{
+    console.log("nnn")
+    document.getElementById('alertii e-mail').innerText="invaliid email"
+  }
+}
+var number=/[0-9]/g;
+
+function chelo(data){
+var numbers=number.test(data);
+
+if(numbers ){
+  console.log("yes")
+  document.getElementById('alert no').innerText=""
+}
+  else{
+console.log("no")
+document.getElementById('alert no').innerText="Invalid no"
+
+  }
+}
+var eleven=new RegExp('(?=.{11})');
+function hilo(data){
+  var elevens=eleven.test(data);
+  if(elevens){
+    document.getElementById('alert no').innerText=""
+  }else{
+    document.getElementById('alert no').innerText="Invalid no"
+  }
+}
+
+
+var thirteen=new RegExp('(?=.{13,})');
+function hiloo(data){
+  var thirteens=thirteen.test(data);
+  if(thirteens){
+    document.getElementById('alert nicss').innerText=""
+    console.log("yes")
+  }else{
+    document.getElementById('alert nicss').innerText="Invalid NIC"
+    console.log("no");
+  }
+}
+
+var dell=/[A-Z]/g;
+function hilooo(data){
+  var dells=dell.test(data);
+  if(dells){
+    document.getElementById('alert degree').innerText=""
+    console.log("yes")
+  }else{
+    document.getElementById('alert degree').innerText="Invalid or only lower and uper case alphabet allow"
+    console.log("no");
+  }
+}
+
+
+
+// }
+</script>
+</html>
